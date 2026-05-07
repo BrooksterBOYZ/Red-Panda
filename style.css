@@ -9,12 +9,7 @@
     --card: #ffffff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+* { margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s ease; }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -23,30 +18,15 @@ body {
     line-height: 1.6;
 }
 
-/* Layout Consistency */
-.page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
+.page-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.section-padding { padding: 80px 0; }
+.hero-padding { padding: 160px 0 60px 0; }
 
-.section-padding {
-    padding: 100px 0;
-}
-
-.hero-padding {
-    padding: 160px 0 60px 0;
-}
-
-/* Shared Components */
 .glass-nav {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    position: fixed; top: 0; width: 100%; z-index: 1000;
 }
 
 .bento-card {
@@ -55,31 +35,25 @@ body {
     padding: 2.5rem;
     border: 1px solid rgba(0,0,0,0.04);
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-    height: 100%;
 }
 
-.bento-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
+.bento-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
 
 .btn-primary {
-    background: var(--dark);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 1.25rem;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-block;
+    background: var(--dark); color: white; padding: 1rem 2rem;
+    border-radius: 1.25rem; font-weight: 700; text-decoration: none; display: inline-block;
 }
 
-.btn-primary:hover {
-    background: var(--red);
-    transform: translateY(-2px);
-}
+.btn-primary:hover { background: var(--red); transform: translateY(-2px); }
 
 .text-gradient {
     background: linear-gradient(to right, var(--red), var(--orange));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
+
+/* Form Styles */
+input, textarea {
+    width: 100%; padding: 1rem; margin-top: 0.5rem;
+    border-radius: 1rem; border: 1px solid #e2e8f0; background: #f8fafc;
+}
+input:focus, textarea:focus { outline: none; border-color: var(--red); background: white; }
