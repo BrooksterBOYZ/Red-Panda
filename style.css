@@ -1,63 +1,61 @@
 /* style.css */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
 
 :root {
-    --panda-red: #e11d48;
-    --panda-orange: #f97316;
-    --panda-bg: #FFFBF9;
-    --glass: rgba(255, 255, 255, 0.8);
+    --red: #ef4444;
+    --orange: #f97316;
+    --dark: #0f172a;
+    --bg: #fffbf9;
 }
+
+* { transition: all 0.3s ease; }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--panda-bg);
-    color: #1e293b;
-    overflow-x: hidden;
+    background-color: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .text-gradient {
-    background: linear-gradient(to right, var(--panda-red), var(--panda-orange));
+    background: linear-gradient(to right, var(--red), var(--orange));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.glass {
-    background: var(--glass);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.btn-primary {
-    background: var(--panda-red);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 1.5rem;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px -5px rgba(225, 29, 72, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    background: #be123c;
-}
-
 .bento-card {
     background: white;
+    border-radius: 2.5rem;
     padding: 2.5rem;
-    border-radius: 3rem;
-    border: 1px solid #f1f5f9;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
 }
 
 .bento-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.05);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
 }
 
-/* Animations */
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+.btn-main {
+    background: var(--dark);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    font-weight: 700;
+    display: inline-block;
 }
-.float { animation: float 6s ease-in-out infinite; }
+
+.btn-main:hover {
+    background: var(--red);
+    transform: scale(1.05);
+}
+
+/* Page Transitions */
+[data-aos] { pointer-events: none; }
+.aos-animate { pointer-events: auto; }
