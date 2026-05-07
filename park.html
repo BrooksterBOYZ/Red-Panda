@@ -1,30 +1,42 @@
-<section class="pt-32 px-6 max-w-7xl mx-auto">
-    <h1 class="text-6xl font-black mb-8 text-gradient">The Sanctuary Grounds</h1>
-    <div class="grid lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-[3rem] shadow-xl border border-orange-50">
-            <span class="text-4xl">🌉</span>
-            <h3 class="text-2xl font-black mt-4">The Crimson Bridge</h3>
-            <p class="text-slate-500 mt-2">A 200ft high-altitude walkway through the canopy. Best for spotting pandas napping in the sun.</p>
-            <div class="mt-4 flex gap-2">
-                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">Easy Walk</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">Best Views</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Velvet | The Park</title>
+</head>
+<body>
+    <nav class="fixed top-0 w-full z-50 glass-nav px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-gradient">VELVET🦊</a>
+            <div class="flex gap-8 font-bold">
+                <a href="index.html">Home</a>
+                <a href="park.html" class="text-red-500">The Park</a>
+                <a href="conservation.html">Conservation</a>
             </div>
         </div>
-        <div class="bg-white p-8 rounded-[3rem] shadow-xl border border-orange-50">
-            <span class="text-4xl">🎋</span>
-            <h3 class="text-2xl font-black mt-4">Whispering Bamboo Path</h3>
-            <p class="text-slate-500 mt-2">A ground-level sensory trail where you can hear the rustle of giant bamboo stalks.</p>
-            <div class="mt-4 flex gap-2">
-                <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold">Quiet Zone</span>
+    </nav>
+
+    <main class="pt-40 px-6 max-w-7xl mx-auto">
+        <h2 class="text-5xl font-black mb-12">Trail Map & Map Zones</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bento-card bg-emerald-50">
+                <span class="text-4xl">🌉</span>
+                <h3 class="text-2xl font-bold mt-4 italic">Skywalk Bridge</h3>
+                <p class="text-slate-600 mt-2">A 500m suspended bridge through the canopy. View pandas at eye level.</p>
+            </div>
+            <div class="bento-card bg-orange-50">
+                <span class="text-4xl">🧘</span>
+                <h3 class="text-2xl font-bold mt-4 italic">Zen Garden</h3>
+                <p class="text-slate-600 mt-2">The quietest zone in the park. Perfect for meditation and silent spotting.</p>
+            </div>
+            <div class="bento-card bg-blue-50">
+                <span class="text-4xl">🚿</span>
+                <h3 class="text-2xl font-bold mt-4 italic">Misty Falls</h3>
+                <p class="text-slate-600 mt-2">Natural waterfalls where red pandas play during the summer heat.</p>
             </div>
         </div>
-        <div class="bg-white p-8 rounded-[3rem] shadow-xl border border-orange-50">
-            <span class="text-4xl">🌊</span>
-            <h3 class="text-2xl font-black mt-4">Hidden Falls</h3>
-            <p class="text-slate-500 mt-2">A secret waterfall located at the north end. The pandas love the cool mist here during summer.</p>
-            <div class="mt-4 flex gap-2">
-                <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-bold">Adventure</span>
-            </div>
-        </div>
-    </div>
-</section>
+    </main>
+</body>
+</html>
