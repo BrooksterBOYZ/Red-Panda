@@ -7,36 +7,41 @@
     <title>Velvet | The Park</title>
 </head>
 <body>
-    <nav class="fixed top-0 w-full z-50 glass-nav px-8 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <nav class="glass-nav py-4">
+        <div class="page-container flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black text-gradient">VELVET🦊</a>
-            <div class="flex gap-8 font-bold">
+            <div class="hidden md:flex gap-8 font-bold">
                 <a href="index.html">Home</a>
                 <a href="park.html" class="text-red-500">The Park</a>
                 <a href="conservation.html">Conservation</a>
+                <a href="cafe.html">Café</a>
             </div>
+            <a href="index.html#book" class="btn-primary">Reserve</a>
         </div>
     </nav>
 
-    <main class="pt-40 px-6 max-w-7xl mx-auto">
-        <h2 class="text-5xl font-black mb-12">Trail Map & Map Zones</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bento-card bg-emerald-50">
-                <span class="text-4xl">🌉</span>
-                <h3 class="text-2xl font-bold mt-4 italic">Skywalk Bridge</h3>
-                <p class="text-slate-600 mt-2">A 500m suspended bridge through the canopy. View pandas at eye level.</p>
-            </div>
-            <div class="bento-card bg-orange-50">
-                <span class="text-4xl">🧘</span>
-                <h3 class="text-2xl font-bold mt-4 italic">Zen Garden</h3>
-                <p class="text-slate-600 mt-2">The quietest zone in the park. Perfect for meditation and silent spotting.</p>
-            </div>
-            <div class="bento-card bg-blue-50">
-                <span class="text-4xl">🚿</span>
-                <h3 class="text-2xl font-bold mt-4 italic">Misty Falls</h3>
-                <p class="text-slate-600 mt-2">Natural waterfalls where red pandas play during the summer heat.</p>
-            </div>
+    <header class="hero-padding page-container text-center">
+        <h1 class="text-6xl md:text-8xl font-black mb-6">Explore the <span class="text-gradient italic">Forest.</span></h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">400 acres of protected high-altitude bamboo forests and sky-bridges.</p>
+    </header>
+
+    <section class="section-padding page-container grid md:grid-cols-3 gap-8">
+        <div class="bento-card">
+            <h3 class="text-2xl font-bold mb-2">Blossom Valley</h3>
+            <p>The primary habitat for our younger, playful red pandas.</p>
         </div>
-    </main>
+        <div class="bento-card">
+            <h3 class="text-2xl font-bold mb-2">The Skywalk</h3>
+            <p>A suspended walkway that lets you walk among the treetops.</p>
+        </div>
+        <div class="bento-card">
+            <h3 class="text-2xl font-bold mb-2">Hidden Mist</h3>
+            <p>A quiet waterfall zone reserved for meditation and study.</p>
+        </div>
+    </section>
+
+    <footer class="section-padding border-t border-slate-100 text-center text-slate-400">
+        <p>© 2026 Velvet Panda Sanctuary • Designed for the Fluff.</p>
+    </footer>
 </body>
 </html>
