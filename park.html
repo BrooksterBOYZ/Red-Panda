@@ -1,47 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Velvet | The Park</title>
-</head>
-<body>
-    <nav class="glass-nav py-4">
-        <div class="page-container flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-black text-gradient">VELVET🦊</a>
-            <div class="hidden md:flex gap-8 font-bold">
-                <a href="index.html">Home</a>
-                <a href="park.html" class="text-red-500">The Park</a>
-                <a href="conservation.html">Conservation</a>
-                <a href="cafe.html">Café</a>
-            </div>
-            <a href="index.html#book" class="btn-primary">Reserve</a>
-        </div>
-    </nav>
+<header class="hero-section page-container">
+    <div data-aos="fade-right">
+        <h1 class="text-8xl font-black mb-6">Explore the <span class="text-gradient">Canopy.</span></h1>
+        <p class="text-xl text-slate-500 max-w-xl">From the low-level bamboo thickets to the 60ft high Skywalk, every inch of the park is designed for discovery.</p>
+    </div>
+</header>
 
-    <header class="hero-padding page-container text-center">
-        <h1 class="text-6xl md:text-8xl font-black mb-6">Explore the <span class="text-gradient italic">Forest.</span></h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">400 acres of protected high-altitude bamboo forests and sky-bridges.</p>
-    </header>
-
-    <section class="section-padding page-container grid md:grid-cols-3 gap-8">
-        <div class="bento-card">
-            <h3 class="text-2xl font-bold mb-2">Blossom Valley</h3>
-            <p>The primary habitat for our younger, playful red pandas.</p>
+<section class="content-section page-container space-y-24">
+    <div class="grid md:grid-cols-2 gap-16 items-center" data-aos="fade-left">
+        <div class="bento-card h-[400px] bg-emerald-50 flex items-center justify-center text-8xl">🌉</div>
+        <div>
+            <h2 class="text-5xl font-black mb-6 italic">The Skywalk</h2>
+            <p class="text-lg text-slate-500 mb-8">Walk high among the branches. Our bridges are made of transparent sustainable polymer, giving you a clear view of pandas sleeping above you.</p>
+            <button class="btn-main">Trail Map PDF</button>
         </div>
-        <div class="bento-card">
-            <h3 class="text-2xl font-bold mb-2">The Skywalk</h3>
-            <p>A suspended walkway that lets you walk among the treetops.</p>
-        </div>
-        <div class="bento-card">
-            <h3 class="text-2xl font-bold mb-2">Hidden Mist</h3>
-            <p>A quiet waterfall zone reserved for meditation and study.</p>
-        </div>
+    </div>
     </section>
-
-    <footer class="section-padding border-t border-slate-100 text-center text-slate-400">
-        <p>© 2026 Velvet Panda Sanctuary • Designed for the Fluff.</p>
-    </footer>
-</body>
-</html>
