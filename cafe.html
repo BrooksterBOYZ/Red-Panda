@@ -1,28 +1,39 @@
-<section class="pt-32 px-6 max-w-5xl mx-auto text-center">
-    <h2 class="text-5xl font-black mb-12">The Bamboo Café Menu</h2>
-    <div class="grid md:grid-cols-2 gap-12 text-left">
-        <div>
-            <h3 class="text-3xl font-bold mb-6 text-orange-600">Morning Brews</h3>
-            <ul class="space-y-6">
-                <li class="flex justify-between border-b border-slate-100 pb-2">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Velvet | Bamboo Café</title>
+</head>
+<body>
+    <header class="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center">
+        <span class="text-6xl">☕</span>
+        <h1 class="text-6xl font-black mt-6 italic font-serif">The Bamboo Café</h1>
+        <p class="text-slate-500 mt-4 text-xl">Artisan treats, organic brews, and forest views.</p>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 pb-32">
+        <div class="bento-card">
+            <h3 class="text-2xl font-black text-red-500 mb-8 uppercase tracking-widest">Beverages</h3>
+            <div class="space-y-6">
+                <div class="flex justify-between items-end border-b border-slate-100 pb-4">
                     <div>
-                        <p class="font-bold">The Panda-ccino</p>
-                        <p class="text-sm text-slate-400">Matcha foam with panda-shaped cocoa dusting.</p>
+                        <p class="text-xl font-bold">The Red Fluff Latte</p>
+                        <p class="text-slate-400 text-sm">Beetroot infusion with oat milk and cinnamon.</p>
                     </div>
-                    <span class="font-black">$7</span>
-                </li>
-                <li class="flex justify-between border-b border-slate-100 pb-2">
-                    <div>
-                        <p class="font-bold">Golden Leaf Tea</p>
-                        <p class="text-sm text-slate-400">Locally sourced high-mountain oolong.</p>
-                    </div>
-                    <span class="font-black">$5</span>
-                </li>
-            </ul>
+                    <span class="font-black text-2xl">$8</span>
+                </div>
+                </div>
         </div>
-        <div class="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl">
-            <h3 class="text-2xl font-bold mb-4 italic">"Eat with the Fluff"</h3>
-            <p class="text-slate-400">Our café features floor-to-ceiling glass. If you're lucky, Maple or her friends will be munching on bamboo just inches away from your table.</p>
+        <div class="bento-card bg-slate-900 text-white">
+            <h3 class="text-2xl font-black mb-6">The Lounge Experience</h3>
+            <p class="text-slate-400 leading-relaxed">Our lounge is built directly into a bamboo grove. It is not uncommon for a red panda to sleep on the glass roof above you while you enjoy your tea.</p>
+            <div class="mt-8 grid grid-cols-2 gap-4">
+                <div class="aspect-square bg-white/10 rounded-3xl"></div>
+                <div class="aspect-square bg-white/10 rounded-3xl"></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</body>
+</html>
