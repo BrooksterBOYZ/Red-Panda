@@ -2,32 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Velvet Panda | Home</title>
 </head>
 <body>
-    <nav class="fixed top-0 w-full z-50 glass-nav px-8 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <nav class="glass-nav py-4">
+        <div class="page-container flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black text-gradient">VELVET🦊</a>
-            <div class="hidden md:flex gap-8 font-bold text-slate-500">
+            <div class="hidden md:flex gap-8 font-bold">
                 <a href="index.html" class="text-red-500">Home</a>
-                <a href="park.html">The Park</a>
-                <a href="conservation.html">Conservation</a>
-                <a href="cafe.html">Café</a>
-                <a href="gallery.html">Gallery</a>
+                <a href="park.html" class="hover:text-red-500">The Park</a>
+                <a href="conservation.html" class="hover:text-red-500">Conservation</a>
+                <a href="cafe.html" class="hover:text-red-500">Café</a>
             </div>
-            <a href="#book" class="btn-main">Reserve Stay</a>
+            <a href="index.html#book" class="btn-primary">Reserve</a>
         </div>
     </nav>
 
-    <header class="pt-48 pb-20 px-6 text-center max-w-4xl mx-auto">
-        <h1 class="text-7xl md:text-8xl font-black mb-8">Redefining <span class="italic font-light">Wild</span> Luxury.</h1>
-        <p class="text-xl text-slate-500 mb-10">Step into a world where conservation meets comfort. Stay in our glass-domed cabins surrounded by the world's most gentle creatures.</p>
-        <div class="flex justify-center gap-4">
-            <a href="park.html" class="btn-main text-lg">Explore the Grounds</a>
-            <a href="conservation.html" class="px-8 py-4 bg-white border border-slate-200 rounded-2xl font-bold">Our Mission</a>
-        </div>
+    <header class="hero-padding page-container text-center">
+        <h1 class="text-6xl md:text-8xl font-black mb-6">Velvet <span class="text-gradient italic">Sanctuary.</span></h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Escape to a high-altitude haven where red pandas thrive and humans find peace.</p>
     </header>
+
+    <section class="section-padding page-container grid md:grid-cols-2 gap-8">
+        <div class="bento-card bg-orange-50">
+            <h2 class="text-3xl font-black mb-4">The Experience</h2>
+            <p>Our sanctuary offers more than just viewing. It’s an immersive lifestyle retreat.</p>
+        </div>
+        <div class="bento-card">
+            <h2 class="text-3xl font-black mb-4">Live Updates</h2>
+            <p>14 Pandas spotted today. Bamboo harvest is currently: <b>Fresh.</b></p>
+        </div>
+    </section>
+
+    <footer class="section-padding border-t border-slate-100 text-center text-slate-400">
+        <p>© 2026 Velvet Panda Sanctuary • Designed for the Fluff.</p>
+    </footer>
 </body>
 </html>
