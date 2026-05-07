@@ -1,47 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Velvet | Café</title>
-</head>
-<body>
-    <nav class="glass-nav py-4">
-        <div class="page-container flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-black text-gradient">VELVET🦊</a>
-            <div class="hidden md:flex gap-8 font-bold">
-                <a href="index.html">Home</a>
-                <a href="park.html">The Park</a>
-                <a href="conservation.html">Conservation</a>
-                <a href="cafe.html" class="text-red-500">Café</a>
-            </div>
-            <a href="index.html#book" class="btn-primary">Reserve</a>
-        </div>
-    </nav>
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
 
-    <header class="hero-padding page-container text-center">
-        <h1 class="text-6xl md:text-8xl font-black mb-6">Bamboo <span class="text-gradient italic">Dining.</span></h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Organic teas and artisan snacks overlooking the habitat.</p>
-    </header>
+:root {
+    --red: #ef4444;
+    --orange: #f97316;
+    --dark: #0f172a;
+    --bg: #fffbf9;
+    --card: #ffffff;
+}
 
-    <section class="section-padding page-container grid md:grid-cols-2 gap-8">
-        <div class="bento-card">
-            <h3 class="text-2xl font-bold mb-4">Signature Drinks</h3>
-            <ul>
-                <li class="flex justify-between border-b py-2"><span>Panda Chai</span> <b>$6</b></li>
-                <li class="flex justify-between border-b py-2"><span>Matcha Mist</span> <b>$7</b></li>
-                <li class="flex justify-between py-2"><span>Golden Bamboo Tea</span> <b>$5</b></li>
-            </ul>
-        </div>
-        <div class="bento-card bg-orange-100">
-            <h3 class="text-2xl font-bold mb-4">The View</h3>
-            <p>Our cafe features floor-to-ceiling glass. Enjoy your meal while red pandas play just inches away.</p>
-        </div>
-    </section>
+* { margin: 0; padding: 0; box-sizing: border-box; transition: all 0.3s ease; }
 
-    <footer class="section-padding border-t border-slate-100 text-center text-slate-400">
-        <p>© 2026 Velvet Panda Sanctuary • Designed for the Fluff.</p>
-    </footer>
-</body>
-</html>
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.page-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.section-padding { padding: 80px 0; }
+.hero-padding { padding: 160px 0 60px 0; }
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+}
+
+.bento-card {
+    background: var(--card);
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.bento-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+
+.btn-primary {
+    background: var(--dark); color: white; padding: 1rem 2rem;
+    border-radius: 1.25rem; font-weight: 700; text-decoration: none; display: inline-block;
+}
+
+.btn-primary:hover { background: var(--red); transform: translateY(-2px); }
+
+.text-gradient {
+    background: linear-gradient(to right, var(--red), var(--orange));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* Form Styles */
+input, textarea {
+    width: 100%; padding: 1rem; margin-top: 0.5rem;
+    border-radius: 1rem; border: 1px solid #e2e8f0; background: #f8fafc;
+}
+input:focus, textarea:focus { outline: none; border-color: var(--red); background: white; }
