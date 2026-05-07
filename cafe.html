@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Velvet | Bamboo Café</title>
+    <title>Velvet | Café</title>
 </head>
 <body>
-    <header class="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center">
-        <span class="text-6xl">☕</span>
-        <h1 class="text-6xl font-black mt-6 italic font-serif">The Bamboo Café</h1>
-        <p class="text-slate-500 mt-4 text-xl">Artisan treats, organic brews, and forest views.</p>
+    <nav class="glass-nav py-4">
+        <div class="page-container flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-gradient">VELVET🦊</a>
+            <div class="hidden md:flex gap-8 font-bold">
+                <a href="index.html">Home</a>
+                <a href="park.html">The Park</a>
+                <a href="conservation.html">Conservation</a>
+                <a href="cafe.html" class="text-red-500">Café</a>
+            </div>
+            <a href="index.html#book" class="btn-primary">Reserve</a>
+        </div>
+    </nav>
+
+    <header class="hero-padding page-container text-center">
+        <h1 class="text-6xl md:text-8xl font-black mb-6">Bamboo <span class="text-gradient italic">Dining.</span></h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Organic teas and artisan snacks overlooking the habitat.</p>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 pb-32">
+    <section class="section-padding page-container grid md:grid-cols-2 gap-8">
         <div class="bento-card">
-            <h3 class="text-2xl font-black text-red-500 mb-8 uppercase tracking-widest">Beverages</h3>
-            <div class="space-y-6">
-                <div class="flex justify-between items-end border-b border-slate-100 pb-4">
-                    <div>
-                        <p class="text-xl font-bold">The Red Fluff Latte</p>
-                        <p class="text-slate-400 text-sm">Beetroot infusion with oat milk and cinnamon.</p>
-                    </div>
-                    <span class="font-black text-2xl">$8</span>
-                </div>
-                </div>
+            <h3 class="text-2xl font-bold mb-4">Signature Drinks</h3>
+            <ul>
+                <li class="flex justify-between border-b py-2"><span>Panda Chai</span> <b>$6</b></li>
+                <li class="flex justify-between border-b py-2"><span>Matcha Mist</span> <b>$7</b></li>
+                <li class="flex justify-between py-2"><span>Golden Bamboo Tea</span> <b>$5</b></li>
+            </ul>
         </div>
-        <div class="bento-card bg-slate-900 text-white">
-            <h3 class="text-2xl font-black mb-6">The Lounge Experience</h3>
-            <p class="text-slate-400 leading-relaxed">Our lounge is built directly into a bamboo grove. It is not uncommon for a red panda to sleep on the glass roof above you while you enjoy your tea.</p>
-            <div class="mt-8 grid grid-cols-2 gap-4">
-                <div class="aspect-square bg-white/10 rounded-3xl"></div>
-                <div class="aspect-square bg-white/10 rounded-3xl"></div>
-            </div>
+        <div class="bento-card bg-orange-100">
+            <h3 class="text-2xl font-bold mb-4">The View</h3>
+            <p>Our cafe features floor-to-ceiling glass. Enjoy your meal while red pandas play just inches away.</p>
         </div>
     </section>
+
+    <footer class="section-padding border-t border-slate-100 text-center text-slate-400">
+        <p>© 2026 Velvet Panda Sanctuary • Designed for the Fluff.</p>
+    </footer>
 </body>
 </html>
