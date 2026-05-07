@@ -6,9 +6,15 @@
     --orange: #f97316;
     --dark: #0f172a;
     --bg: #fffbf9;
+    --card: #ffffff;
 }
 
-* { transition: all 0.3s ease; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -17,10 +23,59 @@ body {
     line-height: 1.6;
 }
 
+/* Layout Consistency */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.hero-padding {
+    padding: 160px 0 60px 0;
+}
+
+/* Shared Components */
 .glass-nav {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bento-card {
+    background: var(--card);
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    height: 100%;
+}
+
+.bento-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.btn-primary {
+    background: var(--dark);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: var(--red);
+    transform: translateY(-2px);
 }
 
 .text-gradient {
@@ -28,34 +83,3 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-.bento-card {
-    background: white;
-    border-radius: 2.5rem;
-    padding: 2.5rem;
-    border: 1px solid rgba(0,0,0,0.03);
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
-}
-
-.bento-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
-}
-
-.btn-main {
-    background: var(--dark);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 1.25rem;
-    font-weight: 700;
-    display: inline-block;
-}
-
-.btn-main:hover {
-    background: var(--red);
-    transform: scale(1.05);
-}
-
-/* Page Transitions */
-[data-aos] { pointer-events: none; }
-.aos-animate { pointer-events: auto; }
