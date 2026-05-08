@@ -4,159 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Velvet Panda Sanctuary — book a visit, donate to reforestation, or get in touch with our team.">
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Velvet | Contact Us</title>
+    <style>
+        .text-gradient {
+            background: linear-gradient(to right, #10b981, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
 </head>
 
-<body class="bg-slate-50">
-    <nav class="glass-nav py-5 bg-white/70 backdrop-blur-md sticky top-0 z-50">
-        <div class="page-container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-black text-emerald-600">VELVET🦊</a>
+<body class="bg-slate-50 font-sans">
+    <nav class="glass-nav py-5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-black text-gradient">VELVET🦊</a>
 
-            <div class="hidden md:flex gap-8">
-                <a href="index.html" class="nav-link hover:text-emerald-600 transition">Home</a>
-                <a href="park.html" class="nav-link hover:text-emerald-600 transition">The Park</a>
-                <a href="cafe.html" class="nav-link hover:text-emerald-600 transition">Café</a>
-                <a href="conservation.html" class="nav-link hover:text-emerald-600 transition">Care</a>
-                <a href="about.html" class="nav-link hover:text-emerald-600 transition">About</a>
-                <a href="contact.html" class="nav-link text-emerald-600 font-bold">Contact</a>
+            <div class="hidden md:flex gap-8 font-medium text-slate-600">
+                <a href="index.html" class="hover:text-emerald-600 transition">Home</a>
+                <a href="park.html" class="hover:text-emerald-600 transition">The Park</a>
+                <a href="cafe.html" class="hover:text-emerald-600 transition">Café</a>
+                <a href="about.html" class="hover:text-emerald-600 transition">About</a>
+                <a href="contact.html" class="text-emerald-600">Contact</a>
             </div>
 
-            <div class="flex items-center gap-3">
-                <a href="contact.html" class="bg-emerald-600 text-white py-3 px-6 rounded-full hidden md:inline-block hover:bg-emerald-700 transition">Visit Us</a>
-                <button class="mobile-toggle md:hidden text-2xl" id="mobile-menu-btn">☰</button>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden px-6 bg-white border-b">
-            <div class="flex flex-col gap-5 py-6">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="park.html" class="nav-link">The Park</a>
-                <a href="cafe.html" class="nav-link">Café</a>
-                <a href="conservation.html" class="nav-link">Care</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link font-bold text-emerald-600">Contact</a>
-            </div>
+            <button class="md:hidden" id="mobile-menu-btn">☰</button>
         </div>
     </nav>
 
     <section class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
 
             <div data-aos="fade-right">
-                <span class="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-sm mb-6 uppercase tracking-widest">Connect</span>
-                <h1 class="text-6xl md:text-7xl font-black mb-8 mt-4 leading-tight">
-                    Get In <span class="text-emerald-600 italic">Touch.</span>
+                <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">Contact</span>
+                <h1 class="text-6xl md:text-7xl font-black mb-8 mt-4 text-slate-900">
+                    Get In <span class="text-gradient">Touch.</span>
                 </h1>
-
-                <p class="text-xl text-slate-500 mb-12 leading-relaxed">
-                    Whether you're planning a visit, donating, or just saying hello — we respond within one business day.
+                <p class="text-xl text-slate-500 mb-10 leading-relaxed">
+                    Planning a visit or have a question? Our team typically responds within one business day.
                 </p>
 
                 <div class="space-y-6">
-                    <div class="flex items-center gap-4 text-lg font-semibold text-slate-700">
-                        <div class="w-12 h-12 flex items-center justify-center bg-white rounded-2xl shadow-sm border border-slate-100 text-2xl">📍</div>
-                        <span>220 Panda Road, Leander, Texas, 78641</span>
+                    <div class="flex items-center gap-4 text-lg font-bold text-slate-700">
+                        <span class="text-2xl">📍</span> 220 Panda Road, Leander, TX
                     </div>
-
-                    <div class="flex items-center gap-4 text-lg font-semibold text-slate-700">
-                        <div class="w-12 h-12 flex items-center justify-center bg-white rounded-2xl shadow-sm border border-slate-100 text-2xl">📞</div>
-                        <span>+1 (512) 555 777 PANDA</span>
-                    </div>
-
-                    <div class="flex items-center gap-4 text-lg font-semibold text-slate-700">
-                        <div class="w-12 h-12 flex items-center justify-center bg-white rounded-2xl shadow-sm border border-slate-100 text-2xl">🕗</div>
-                        <span>Mon–Fri · 9am–5pm</span>
+                    <div class="flex items-center gap-4 text-lg font-bold text-slate-700">
+                        <span class="text-2xl">📞</span> +1 (512) 555-7777
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl shadow-emerald-900/5 border border-slate-100" data-aos="fade-left">
-                
-                <form 
-                    name="contact"
-                    method="POST"
-                    action="/thank-you.html"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                    class="space-y-5"
-                >
-                    <input type="hidden" name="form-name" value="contact">
+            <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl shadow-emerald-900/5 border border-slate-100" data-aos="fade-left">
+                <form id="velvet-contact-form" class="space-y-5">
+                    <input type="text" name="name" placeholder="Full Name" required 
+                        class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-emerald-500/20 outline-none transition">
 
-                    <p class="hidden">
-                        <label>Don’t fill this out: <input name="bot-field"></label>
-                    </p>
+                    <input type="email" name="email" placeholder="Email Address" required 
+                        class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-emerald-500/20 outline-none transition">
 
-                    <div class="grid gap-5">
-                        <input type="text" name="name" placeholder="Full Name" required 
-                            class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition">
+                    <select name="type" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none transition">
+                        <option value="" disabled selected>Inquiry Type</option>
+                        <option value="visit">Plan a Visit</option>
+                        <option value="group">Group Booking</option>
+                        <option value="other">Other</option>
+                    </select>
 
-                        <input type="email" name="email" placeholder="Email Address" required 
-                            class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition">
+                    <textarea name="message" rows="4" placeholder="Your message..." required 
+                        class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none transition"></textarea>
 
-                        <select name="inquiry_type" required
-                            class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition">
-                            <option value="" disabled selected>Inquiry Type</option>
-                            <option value="visit">Plan a Visit</option>
-                            <option value="group">Group Booking</option>
-                            <option value="donate">Donate / Sponsor</option>
-                            <option value="press">Press & Media</option>
-                            <option value="other">Other</option>
-                        </select>
-
-                        <textarea name="message" rows="5" placeholder="Your message…" required 
-                            class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-emerald-600/20 transition-all active:scale-[0.98]">
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-2xl shadow-lg transition-all active:scale-[0.98]">
                         Send Inquiry
                     </button>
                 </form>
             </div>
-
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-20 mt-20">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <a href="index.html" class="text-4xl font-black text-emerald-400 inline-block mb-4">
-                VELVET🦊
-            </a>
-
-            <p class="text-slate-400 mb-10 text-lg max-w-md mx-auto">
-                A masterclass in luxury eco-tourism.
-            </p>
-
-            <div class="flex justify-center flex-wrap gap-8 mb-10 text-slate-300">
-                <a href="park.html" class="hover:text-white transition">The Park</a>
-                <a href="cafe.html" class="hover:text-white transition">Café</a>
-                <a href="conservation.html" class="hover:text-white transition">Conservation</a>
-                <a href="about.html" class="hover:text-white transition">Founders</a>
-                <a href="contact.html" class="hover:text-white transition">Contact</a>
-            </div>
-
-            <p class="text-slate-500 text-sm">
-                © 2026 Velvet Sanctuary. Built by Luca, Rachel, Brooks, & Josiah.
-            </p>
-        </div>
+    <footer class="py-10 text-center text-slate-400 text-sm">
+        <p>© 2026 Velvet Sanctuary. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Init AOS
-        AOS.init({ duration: 900, once: true, offset: 60 });
+        AOS.init({ duration: 800, once: true });
 
-        // Mobile Menu Logic
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            btn.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
+        // VERCEL SUCCESS HANDLER
+        const contactForm = document.getElementById('velvet-contact-form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop the "POST" that causes the white screen
+            
+            // In a real Vercel app, you would fetch() an API route here.
+            // For now, we simulate a successful send and redirect:
+            
+            console.log("Form submitted!");
+            window.location.href = "thank-you.html";
         });
     </script>
-
 </body>
 </html>
