@@ -3,91 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Velvet Panda Sanctuary">
-    
-    <!-- ✅ FIXED CSS PATH -->
-    <link rel="stylesheet" href="css/style.css">
-
+    <meta name="description" content="Contact Velvet Panda Sanctuary — book a visit, donate to reforestation, or get in touch with our team.">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <title>Velvet | Contact Us</title>
 </head>
 
 <body>
+    <!-- NAV -->
+    <nav class="glass-nav py-5">
+        <div class="page-container flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-black text-gradient">VELVET🦊</a>
 
-<nav class="glass-nav py-5">
-    <div class="page-container flex justify-between items-center">
-        <a href="index.html" class="text-3xl font-black text-gradient">VELVET🦊</a>
+            <div class="hidden md:flex gap-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="park.html" class="nav-link">The Park</a>
+                <a href="cafe.html" class="nav-link">Café</a>
+                <a href="conservation.html" class="nav-link">Care</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active-link">Contact</a>
+            </div>
 
-        <div class="hidden md:flex gap-8">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="park.html" class="nav-link">The Park</a>
-            <a href="cafe.html" class="nav-link">Café</a>
-            <a href="conservation.html" class="nav-link">Care</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="contact.html" class="nav-link active-link">Contact</a>
+            <div class="flex items-center gap-3">
+                <a href="contact.html" class="btn-main py-3 px-6 hidden md:inline-block">Visit Us</a>
+                <button class="mobile-toggle md:hidden" id="mobile-menu-btn">☰</button>
+            </div>
         </div>
-    </div>
-</nav>
 
-<section class="hero-section page-container">
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden page-container">
+            <div class="flex flex-col gap-5 py-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="park.html" class="nav-link">The Park</a>
+                <a href="cafe.html" class="nav-link">Café</a>
+                <a href="conservation.html" class="nav-link">Care</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active-link">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<div class="grid lg:grid-cols-2 gap-20 w-full">
+    <!-- HERO -->
+    <section class="hero-section page-container">
+        <div class="grid lg:grid-cols-2 gap-20 w-full">
 
-    <!-- LEFT -->
-    <div>
-        <span class="badge mb-6">We'd Love to Hear From You</span>
+            <!-- LEFT -->
+            <div data-aos="fade-right">
+                <span class="badge mb-6">We'd Love to Hear From You</span>
+                <h1 class="text-6xl md:text-7xl font-black mb-8 mt-4">
+                    Get In <span class="text-gradient">Touch.</span>
+                </h1>
 
-        <h1 class="text-6xl md:text-7xl font-black mb-8 mt-4">
-            Get In <span class="text-gradient">Touch.</span>
-        </h1>
+                <p class="text-xl text-slate-500 mb-12 leading-relaxed">
+                    Whether you're planning a visit, donating, or just saying hello — we respond within one business day.
+                </p>
 
-        <p class="text-xl text-slate-500 mb-12">
-            We respond within one business day.
-        </p>
-    </div>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 text-lg font-bold">
+                        <div class="icon-circle text-2xl">📍</div>
+                        <span>220 Panda Road, Leander, Texas, 78641</span>
+                    </div>
 
-    <!-- FORM -->
-    <div class="bento-card bg-white">
+                    <div class="flex items-center gap-4 text-lg font-bold">
+                        <div class="icon-circle text-2xl">📞</div>
+                        <span>+1 (512) 555 777 PANDA-LIFE</span>
+                    </div>
 
-        <form name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              action="thank-you.html"
-              class="space-y-5">
+                    <div class="flex items-center gap-4 text-lg font-bold">
+                        <div class="icon-circle text-2xl">🕗</div>
+                        <span>Mon–Fri · 9am–5pm</span>
+                    </div>
+                </div>
+            </div>
 
-            <input type="hidden" name="form-name" value="contact">
+            <!-- FORM -->
+            <div class="bento-card bg-white" data-aos="fade-left">
 
-            <p style="display:none">
-                <label>Bot: <input name="bot-field"></label>
+                <form 
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                    class="space-y-5"
+                >
+
+                    <!-- Netlify form name -->
+                    <input type="hidden" name="form-name" value="contact">
+
+                    <!-- Redirect AFTER submit -->
+                    <input type="hidden" name="redirect" value="/thank-you.html">
+
+                    <!-- BOT FIELD -->
+                    <p style="display:none">
+                        <label>Don’t fill this out: <input name="bot-field"></label>
+                    </p>
+
+                    <input type="text" name="name" placeholder="Full Name" required>
+
+                    <input type="email" name="email" placeholder="Email Address" required>
+
+                    <select name="inquiry_type">
+                        <option disabled selected>Inquiry Type</option>
+                        <option value="visit">Plan a Visit</option>
+                        <option value="group">Group Booking</option>
+                        <option value="donate">Donate / Sponsor</option>
+                        <option value="press">Press & Media</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <textarea name="message" rows="5" placeholder="Your message…" required></textarea>
+
+                    <button type="submit" class="btn-main w-full text-lg">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="page-container text-center">
+            <a href="index.html" class="text-4xl font-black text-gradient inline-block mb-4">
+                VELVET🦊
+            </a>
+
+            <p class="text-slate-400 mb-10 text-lg max-w-md mx-auto">
+                A masterclass in luxury eco-tourism.
             </p>
 
-            <input type="text" name="name" placeholder="Full Name" required>
+            <div class="flex justify-center flex-wrap gap-8 mb-10">
+                <a href="park.html">The Park</a>
+                <a href="cafe.html">Café</a>
+                <a href="conservation.html">Conservation</a>
+                <a href="about.html">Founders</a>
+                <a href="contact.html">Contact</a>
+            </div>
 
-            <input type="email" name="email" placeholder="Email Address" required>
+            <p class="opacity-30">
+                © 2026 Velvet Sanctuary. Founded by Luca, Rachel, Brooks, & Josiah.
+            </p>
+        </div>
+    </footer>
 
-            <select name="type">
-                <option disabled selected>Inquiry Type</option>
-                <option>Visit</option>
-                <option>Donate</option>
-                <option>Press</option>
-            </select>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 60 });
 
-            <textarea name="message" rows="5" placeholder="Message..." required></textarea>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
 
-            <button type="submit" class="btn-main w-full">
-                Send Inquiry
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-
-</section>
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            btn.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
+        });
+    </script>
 
 </body>
 </html>
