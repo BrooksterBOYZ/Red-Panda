@@ -73,30 +73,81 @@
                 </div>
             </div>
 
-            <div class="bento-card bg-white" data-aos="fade-left">
-                <form id="velvet-contact-form" class="space-y-5">
-                    
-                    <input type="text" name="name" placeholder="Full Name" required>
+            <div class="bento-card contact-form-card bg-white" data-aos="fade-left">
+                <div class="form-intro">
+                    <span class="form-kicker">Contact form</span>
+                    <h2>Tell us what you need.</h2>
+                    <p>Share a few details and the guest care team will route your note to the right person.</p>
+                </div>
 
-                    <input type="email" name="email" placeholder="Email Address" required>
+                <form id="velvet-contact-form" class="contact-form">
+                    <div class="form-grid">
+                        <label class="field-group">
+                            <span>Full name</span>
+                            <input type="text" name="name" placeholder="Avery Chen" autocomplete="name" required>
+                        </label>
 
-                    <select name="inquiry_type" required>
-                        <option disabled selected value="">Inquiry Type</option>
-                        <option value="visit">Plan a Visit</option>
-                        <option value="group">Group Booking</option>
-                        <option value="donate">Donate / Sponsor</option>
-                        <option value="press">Press & Media</option>
-                        <option value="other">Other</option>
-                    </select>
+                        <label class="field-group">
+                            <span>Email address</span>
+                            <input type="email" name="email" placeholder="avery@example.com" autocomplete="email" required>
+                        </label>
+                    </div>
 
-                    <textarea name="message" rows="5" placeholder="Your message…" required></textarea>
+                    <label class="field-group">
+                        <span>Inquiry type</span>
+                        <select name="inquiry_type" required>
+                            <option disabled selected value="">Choose a topic</option>
+                            <option value="visit">Plan a Visit</option>
+                            <option value="group">Group Booking</option>
+                            <option value="donate">Donate / Sponsor</option>
+                            <option value="press">Press & Media</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
 
-                    <button type="submit" class="btn-main w-full text-lg">
-                        Send Inquiry
-                    </button>
+                    <label class="field-group">
+                        <span>Message</span>
+                        <textarea name="message" rows="5" placeholder="Preferred dates, guest count, accessibility needs, or anything else we should know." required></textarea>
+                    </label>
+
+                    <div class="form-actions">
+                        <p>Replies usually arrive within one business day.</p>
+                        <button type="submit" class="btn-main">
+                            Send Inquiry
+                        </button>
+                    </div>
                 </form>
             </div>
 
+        </div>
+    </section>
+
+    <section class="content-section page-container">
+        <div class="grid lg:grid-cols-3 gap-6">
+            <div class="bento-card bg-slate-900 text-white lg:col-span-1" data-aos="fade-up">
+                <span class="badge mb-6" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.7);">Before You Arrive</span>
+                <h2 class="text-4xl font-black mt-4 mb-6">Good visits start with quiet logistics.</h2>
+                <p class="text-slate-400">Bookings are confirmed by a coordinator after weather, trail conditions, and animal care windows are checked.</p>
+            </div>
+            <div class="bento-card lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="mini-card">
+                        <p class="text-4xl mb-4">🚐</p>
+                        <h3 class="font-black text-xl">Transfers</h3>
+                        <p class="text-slate-500 mt-2 text-sm">Private pickup is available from Austin airport and nearby partner lodges.</p>
+                    </div>
+                    <div class="mini-card">
+                        <p class="text-4xl mb-4">🥾</p>
+                        <h3 class="font-black text-xl">What to Wear</h3>
+                        <p class="text-slate-500 mt-2 text-sm">Closed shoes, quiet layers, and rain protection are recommended year-round.</p>
+                    </div>
+                    <div class="mini-card">
+                        <p class="text-4xl mb-4">🧒</p>
+                        <h3 class="font-black text-xl">Families</h3>
+                        <p class="text-slate-500 mt-2 text-sm">Children are welcome on lower trails; Skywalk access starts at age twelve.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
