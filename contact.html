@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Velvet Panda Sanctuary — book a visit, donate to reforestation, or get in touch with our team.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Velvet | Contact Us</title>
+</head>
+
+<body>
+    <nav class="glass-nav py-5">
+        <div class="page-container flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-black text-gradient" style="display:flex;align-items:center;gap:0.4rem;">VELVET<svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle"><ellipse cx="8" cy="10" rx="6" ry="7" fill="#c0392b"/><ellipse cx="28" cy="10" rx="6" ry="7" fill="#c0392b"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="#f5cba7"/><ellipse cx="28" cy="11" rx="3" ry="4" fill="#f5cba7"/><ellipse cx="18" cy="21" rx="14" ry="13" fill="#c0392b"/><ellipse cx="11" cy="21" rx="5" ry="5.5" fill="#fdfaf6"/><ellipse cx="25" cy="21" rx="5" ry="5.5" fill="#fdfaf6"/><ellipse cx="18" cy="27" rx="5" ry="3.5" fill="#fdfaf6"/><circle cx="11.5" cy="20" r="2.2" fill="#1a0a00"/><circle cx="24.5" cy="20" r="2.2" fill="#1a0a00"/><circle cx="12.3" cy="19.2" r="0.7" fill="white"/><circle cx="25.3" cy="19.2" r="0.7" fill="white"/><ellipse cx="18" cy="25.5" rx="1.8" ry="1.2" fill="#1a0a00"/></svg></a>
+
+            <div class="hidden md:flex gap-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="park.html" class="nav-link">The Park</a>
+                <a href="cafe.html" class="nav-link">Café</a>
+                <a href="conservation.html" class="nav-link">Care</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active-link">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="contact.html" class="btn-main py-3 px-6 hidden md:inline-block">Visit Us</a>
+                <button class="mobile-toggle md:hidden" id="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden page-container">
+            <div class="flex flex-col gap-5 py-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="park.html" class="nav-link">The Park</a>
+                <a href="cafe.html" class="nav-link">Café</a>
+                <a href="conservation.html" class="nav-link">Care</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active-link">Contact</a>
+                <a href="contact.html" class="btn-main text-center mt-2">Visit Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section page-container">
+        <div class="grid lg:grid-cols-2 gap-20 w-full">
+
+            <div data-aos="fade-right">
+                <span class="badge mb-6">Contact Us</span>
+                <h1 class="text-6xl md:text-7xl font-black mb-8 mt-4">
+                    Get In <span class="text-gradient">Touch.</span>
+                </h1>
+
+                <p class="text-xl text-slate-500 mb-12 leading-relaxed">
+                    Whether you're planning a visit, donating, or just saying hello — we respond within one business day.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 text-lg font-bold">
+                        <div class="icon-circle text-2xl">📍</div>
+                        <span>220 Panda Road, Leander, Texas, 78641</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 text-lg font-bold">
+                        <div class="icon-circle text-2xl">📞</div>
+                        <span>+1 (512) 555-0173</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 text-lg font-bold">
+                        <div class="icon-circle text-2xl">🕗</div>
+                        <span>Mon–Fri · 9am–5pm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card contact-form-card bg-white" data-aos="fade-left">
+                <div class="form-intro">
+                    <span class="form-kicker">Contact form</span>
+                    <h2>Tell us what you need.</h2>
+                    <p>Share a few details and the guest care team will route your note to the right person.</p>
+                </div>
+
+                <form id="velvet-contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display:none"><label>Do not fill: <input name="bot-field"></label></p>
+                    <div class="form-grid">
+                        <label class="field-group">
+                            <span>Full name</span>
+                            <input type="text" name="name" placeholder="Avery Chen" autocomplete="name" required>
+                        </label>
+
+                        <label class="field-group">
+                            <span>Email address</span>
+                            <input type="email" name="email" placeholder="avery@example.com" autocomplete="email" required>
+                        </label>
+                    </div>
+
+                    <label class="field-group">
+                        <span>Inquiry type</span>
+                        <select name="inquiry_type" required>
+                            <option disabled selected value="">Choose a topic</option>
+                            <option value="visit">Plan a Visit</option>
+                            <option value="group">Group Booking</option>
+                            <option value="donate">Donate / Sponsor</option>
+                            <option value="press">Press & Media</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+
+                    <label class="field-group">
+                        <span>Message</span>
+                        <textarea name="message" rows="5" placeholder="Preferred dates, guest count, accessibility needs, or anything else we should know." required></textarea>
+                    </label>
+
+                    <div class="form-actions">
+                        <p>Replies usually arrive within one business day.</p>
+                        <button type="submit" class="btn-main">
+                            Send Inquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-section page-container">
+        <div class="grid lg:grid-cols-3 gap-6">
+            <div class="bento-card bg-slate-900 text-white lg:col-span-1" data-aos="fade-up">
+                <span class="badge mb-6" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.7);">Before You Arrive</span>
+                <h2 class="text-4xl font-black mt-4 mb-6">Good visits start with quiet logistics.</h2>
+                <p class="text-slate-400">Bookings are confirmed by a coordinator after weather, trail conditions, and animal care windows are checked.</p>
+            </div>
+            <div class="bento-card lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="mini-card">
+                        <p class="text-4xl mb-4">🚐</p>
+                        <h3 class="font-black text-xl">Transfers</h3>
+                        <p class="text-slate-500 mt-2 text-sm">Private pickup is available from Austin airport and nearby partner lodges.</p>
+                    </div>
+                    <div class="mini-card">
+                        <p class="text-4xl mb-4">🥾</p>
+                        <h3 class="font-black text-xl">What to Wear</h3>
+                        <p class="text-slate-500 mt-2 text-sm">Closed shoes, quiet layers, and rain protection are recommended year-round.</p>
+                    </div>
+                    <div class="mini-card">
+                        <p class="text-4xl mb-4">🧒</p>
+                        <h3 class="font-black text-xl">Families</h3>
+                        <p class="text-slate-500 mt-2 text-sm">Children are welcome on lower trails; Skywalk access starts at age twelve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="page-container text-center">
+            <a href="index.html" class="text-4xl font-black text-gradient inline-flex items-center gap-2 mb-4">VELVET<svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle"><ellipse cx="8" cy="10" rx="6" ry="7" fill="#c0392b"/><ellipse cx="28" cy="10" rx="6" ry="7" fill="#c0392b"/><ellipse cx="8" cy="11" rx="3" ry="4" fill="#f5cba7"/><ellipse cx="28" cy="11" rx="3" ry="4" fill="#f5cba7"/><ellipse cx="18" cy="21" rx="14" ry="13" fill="#c0392b"/><ellipse cx="11" cy="21" rx="5" ry="5.5" fill="#fdfaf6"/><ellipse cx="25" cy="21" rx="5" ry="5.5" fill="#fdfaf6"/><ellipse cx="18" cy="27" rx="5" ry="3.5" fill="#fdfaf6"/><circle cx="11.5" cy="20" r="2.2" fill="#1a0a00"/><circle cx="24.5" cy="20" r="2.2" fill="#1a0a00"/><circle cx="12.3" cy="19.2" r="0.7" fill="white"/><circle cx="25.3" cy="19.2" r="0.7" fill="white"/><ellipse cx="18" cy="25.5" rx="1.8" ry="1.2" fill="#1a0a00"/></svg></a>
+
+            <p class="text-slate-400 mb-10 text-lg max-w-md mx-auto">
+                A masterclass in luxury eco-tourism.
+            </p>
+
+            <div class="flex justify-center flex-wrap gap-8 mb-10">
+                <a href="park.html">The Park</a>
+                <a href="cafe.html">Café</a>
+                <a href="conservation.html">Conservation</a>
+                <a href="about.html">Founders</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <p class="opacity-30">
+                © 2026 Velvet Sanctuary. Founded by Luca, Rachel, Brooks, & Josiah.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 60 });
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            btn.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
+        });
+
+        // Form submission: always redirect to thank-you page
+        const contactForm = document.getElementById('velvet-contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'thank-you.html';
+        });
+    </script>
+
+</body>
+</html>
