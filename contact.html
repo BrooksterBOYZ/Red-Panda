@@ -38,6 +38,7 @@
                 <a href="conservation.html" class="nav-link">Care</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link active-link">Contact</a>
+                <a href="contact.html" class="btn-main text-center mt-2">Visit Us</a>
             </div>
         </div>
     </nav>
@@ -80,7 +81,9 @@
                     <p>Share a few details and the guest care team will route your note to the right person.</p>
                 </div>
 
-                <form id="velvet-contact-form" class="contact-form">
+                <form id="velvet-contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display:none"><label>Do not fill: <input name="bot-field"></label></p>
                     <div class="form-grid">
                         <label class="field-group">
                             <span>Full name</span>
@@ -187,14 +190,18 @@
             btn.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
         });
 
-        // VERCEL SUCCESS REDIRECT
+        // Form submission — Netlify handles POST; JS redirect is a fallback for local dev
         const contactForm = document.getElementById('velvet-contact-form');
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); 
-            // This prevents the white screen and triggers the redirect
-            window.location.href = "thank-you.html";
+            // Only intercept if not a real Netlify environment
+            if (!document.querySelector('meta[name="netlify"]') && window.location.hostname === 'localhost') {
+                e.preventDefault();
+                window.location.href = 'thank-you.html';
+            }
+            // Otherwise let the form POST naturally and Netlify redirects to /thank-you
         });
     </script>
 
 </body>
 </html>
+
